@@ -16,3 +16,22 @@ body {
 footer {
   font-size: 12px;
 }
+
+.search-form-input {
+  background-color: aliceblue;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.search-form-button {
+  background-color: #c997f7;
+  border: none;
+  padding: 15px 30px;
+  margin-left: 5px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: rgb(127, 125, 125);
+}
