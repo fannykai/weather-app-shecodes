@@ -16,27 +16,30 @@
   <body>
     <div class="weather-app">
       <header>
-        <footer>
-          <input
-            type="search"
-            placeholder="Enter a city..."
-            required
-            class="search-form-input"
-          />
-          <input type="submit" value="Search" class="search-form-button" />
-        </footer>
+        <input
+          type="search"
+          placeholder="Enter a city..."
+          required
+          class="search-form-input"
+        />
+        <input type="submit" value="Search" class="search-form-button" />
       </header>
 
       <main>
-        <div>
-          <h1>Stockholm</h1>
-          <p>
-            Thursday 13:34, broken clouds <br />
-            Humidity: 85%, Wind: 7.2km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Stockholm</h1>
+            <p class="weather-app-details">
+              Thursday 13:34, broken clouds <br />
+              Humidity: <strong>85%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temp-container">
+            <div class="weather-app-icon">☀️</div>
+            <div class="weather-app-temp">18</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
-
-        <div>☀️ 18°C</div>
       </main>
 
       <footer>
