@@ -13,8 +13,23 @@ body {
   padding: 30px;
 }
 
+header {
+  border-bottom: 1px solid #c997f7;
+  padding: 0 0 30px 0;
+}
+
+main {
+  border-bottom: 1px solid #c997f7;
+  padding: 0 0 30px 0;
+}
+
+a {
+  color: #c997f7;
+}
+
 footer {
   font-size: 12px;
+  text-align: center;
 }
 
 .search-form-input {
