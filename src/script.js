@@ -8,7 +8,7 @@ function refreshWeather(response) {
   let windElement = document.querySelector("#wind");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-
+  let iconElement = document.querySelector("#icon");
 
   //den här raden göra att när man byter ut h1:an i html koden, men har skivit staden med olika stora bokstäver kommer den att skira ut standen som den är skriven i api datan
   cityElement.innerHTML = response.data.city;
@@ -24,6 +24,9 @@ function refreshWeather(response) {
 
   // hämtar wind speed från apiet
   windElement.innerHTML = `${response.data.wind.speed} km/h`;
+
+  // hämtar icon url från apiet
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
   //här tar avrundar jag temperaturen
   temperatureElement.innerHTML = Math.round(temperature);
