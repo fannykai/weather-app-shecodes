@@ -5,6 +5,9 @@ function refreshWeather(response) {
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+
+  console.log(response.data);
 
   //den här raden göra att när man byter ut h1:an i html koden, men har skivit staden med olika stora bokstäver kommer den att skira ut standen som den är skriven i api datan
   cityElement.innerHTML = response.data.city;
@@ -14,6 +17,8 @@ function refreshWeather(response) {
 
   // hämtar humidity från apiet
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+  windElement.innerHTML = `${response.data.wind.speed} km/h`;
 
   //här tar avrundar jag temperaturen
   temperatureElement.innerHTML = Math.round(temperature);
