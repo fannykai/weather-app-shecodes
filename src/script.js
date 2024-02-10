@@ -13,7 +13,7 @@ function refreshWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
 
   // hämtar humidity från apiet
-  humidityElement.innerHTML = response.data.temperature.humidity;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 
   //här tar avrundar jag temperaturen
   temperatureElement.innerHTML = Math.round(temperature);
