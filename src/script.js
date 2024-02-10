@@ -3,9 +3,13 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
 
   //den här raden göra att när man byter ut h1:an i html koden, men har skivit staden med olika stora bokstäver kommer den att skira ut standen som den är skriven i api datan
   cityElement.innerHTML = response.data.city;
+
+  //den här raden lägger in beskrivning av vänder där id:et description finns i Html konden
+  descriptionElement.innerHTML = response.data.condition.description;
 
   //här tar avrundar jag temperaturen
   temperatureElement.innerHTML = Math.round(temperature);
